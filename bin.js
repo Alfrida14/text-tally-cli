@@ -18,7 +18,7 @@ With no FILE arguments, reads standard input. Use - as a FILE to read stdin.
 }
 
 function count(text) {
-  const lines = text.length === 0 ? 0 : text.split(/\r\n|\n|\r/).length;
+  const lines = text.length === 0 ? 0 : text.split(/\r\n|\n|\r/).length - (/(?:\r\n|\n|\r)$/.test(text) ? 1 : 0);
   const words = (text.match(/\S+/gu) || []).length;
   const characters = Array.from(text).length;
   return { lines, words, characters };

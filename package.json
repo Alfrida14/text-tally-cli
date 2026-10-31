@@ -1,0 +1,9 @@
+{
+  "name": "text-tally-cli",
+  "version": "1.0.0",
+  "description": "Count lines, words, and characters in text files or standard input",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "bin": { "text-tally": "./bin.js" },
+  "scripts": { "start": "node bin.js" }
+}
